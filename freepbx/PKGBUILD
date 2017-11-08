@@ -3,17 +3,17 @@
 # Contributors: judfilm <jud@judfilm.net>
 
 pkgname=freepbx
-pkgver=2.9.0
+pkgver=14.0
 pkgrel=1
 pkgdesc="Full-featured PBX web application for Asterisk"
 url="http://www.freepbx.org/"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('alsa-lib' 'speex' 'popt' 'dahdi' 'libvorbis' 'curl' 'mysql' 'asterisk' 'apache' 'php' 'perl')
+depends=('alsa-lib' 'asterisk' 'apache' 'curl' 'dadhi' 'fail2ban' 'git' 'libvorbis' 'mariadb' 'perl' 'php' 'php-apache' 'php-gd php-pear' 'php-ldap' 'php-sqlite' 'php-xsl' 'popt' 'speex')
 #makedepends=('unixodbc' 'sqlite3')
 install=($pkgname.install)
-source=(http://mirror.freepbx.org/$pkgname-$pkgver.tar.gz)
-md5sums=('055f9d6b0dfb7f2f22669b6caa528e0f')
+source=(http://mirror.freepbx.org/modules/packages/freepbx/$pkgname-$pkgver-latest.tgz)
+md5sums=('322c83c994ab997d7c1c94415f86d8a5')
 
 build() {
 	cd $srcdir/$pkgname-$pkgver
